@@ -10,7 +10,7 @@ import { AcumuladorComponent } from './acumulador/acumulador.component';
         AcumuladorComponent
     ],
     imports: [
-        // CommonModule
+        
     ]
 })
 
