@@ -1,0 +1,17 @@
+tslint.json             -> Reglas que obligan a programar de cierta manera
+tsconfig.json           -> Archivo de configuracion de Ts, como se traduce a Js
+tsconfig.spec.json      -> Corresponde a parte de pruebas, extiende del tsconfig.json
+tsconfig.app.json       -> Util al generar los builds de produccion, config. enfocada al proyecto
+
+package.json            -> No recomendable hacer modif. directas, al anadir nuevo paquete es desde terminal.. comandos, dependencias, dep. de desarrollo etc.
+package.lock.json       -> Como se construye cada modulo
+
+Karma.conf.js            -> Config. de pruebas de integracion
+angular.json             -> config. del proeycto, scripts, css, assets, etc.
+.gitignore               -> Archivos que no da seguimiento git
+
+.editorconfig            -> Configuraacion de archivos, raro hacer modif.
+.browseslistrc           -> Configuraacion de navegadores compatibles
+
+e2e                      -> Pruebas end-to-end
+node_modules             -> Paqueteria instalada

@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({ // decorador que requiere un arg de tipo objeto
+  selector: 'app-root', // nombre del componente
+  templateUrl: 'app.component.html'
+  // template: `
+  //   <h1>Hola Mundo!</h1>
+  // `
 })
+
 export class AppComponent {
-  title = 'Bases';
+ 
 }

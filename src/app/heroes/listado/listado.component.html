@@ -1,0 +1,20 @@
+<h1>Listado de Heroes</h1>
+
+<table border="1">
+  <tr *ngFor="let heroe of heroes; let i = index">
+    <td bgColor="gray" width="20px" align="center">{{ i + 1 }}</td>
+    <td>{{ heroe }}</td>
+    <td><button (click)="deleteHero(i)">X</button></td>
+  </tr>
+</table>
+<hr />
+
+<!-- adentro del ngif solo apaere si es true -->
+<p *ngIf="deletedHero; else noDeleted">
+  Heroe Borrado: <s>{{ deletedHero }}</s>
+</p>
+
+<!-- referencia local del lado de html -->
+<ng-template #noDeleted>
+  <span>No se ha borrado nada.</span>
+</ng-template>
