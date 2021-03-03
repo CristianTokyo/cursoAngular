@@ -1,0 +1,26 @@
+<h1>Dragon Ball Z</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <app-characters [charactersSon]="characters">
+      <!-- llaves cuadradas es el hijo, al que va el input -->
+    </app-characters>
+    <!-- <h3>Characters</h3>
+    <hr />
+    <ul *ngFor="let character of characters; let i = index">
+      <li>{{ character.name }} - {{ character.power | number }}</li>
+    </ul> -->
+  </div>
+
+  <div class="col">
+    <!-- <app-add 
+      [newCharacterSon]="newCharacter" 
+      [charactersSon]="characters">
+    </app-add> // No es lo ideal, mandar el arreglo completo a modif. se tiene que mantener en el MAIN-->
+    <app-add 
+      [newCharacterSon]="newCharacter"
+      (onNewCharacter)="addNewCharacter($event)">
+    </app-add>
+  </div>
+</div>
