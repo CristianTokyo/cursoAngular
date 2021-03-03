@@ -2,5 +2,7 @@
 <hr />
 <ul *ngFor="let character of characters; let i = index">
     <!-- es characters por el nombre en el componente hijo-->
-  <li>{{ character.name }} - {{ character.power | number }}</li>
+  <li>{{ character.name }} - {{ character.power | number }}
+    <button (click)='delete(i)'>X</button>
+  </li>
 </ul>

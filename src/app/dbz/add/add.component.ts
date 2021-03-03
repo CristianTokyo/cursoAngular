@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-add',
@@ -13,16 +14,18 @@ export class AddComponent {
     power: undefined
   } // me trae el trunks
 
-  @Output() onNewCharacter : EventEmitter<Character> = new EventEmitter() // va a emitir un personaje
+  constructor(private dbzService: DbzService){ }
+
+  // @Output() onNewCharacter : EventEmitter<Character> = new EventEmitter() // va a emitir un personaje
 
   add() {
     if (this.newCharacter.name.trim().length === 0 || this.newCharacter.power == undefined) { // validacion no nulo
       return
     }
     //this.characters.push(this.newCharacter)
-    this.onNewCharacter.emit(this.newCharacter) // coinciden los tipos de interfaz, ($event )-> html
+    // this.onNewCharacter.emit(this.newCharacter) // coinciden los tipos de interfaz, ($event )-> html
     // se emite lo que quiera con ese evento, para mandar al padre
-
+    this.dbzService.addCharacter( this.newCharacter)
     this.newCharacter = {
       name: '',
       power: undefined
